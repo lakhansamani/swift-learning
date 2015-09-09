@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mylab: UILabel!
+    @IBAction func buttonClick(sender: AnyObject) {
+        mylab.text="clicked button"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println("Hello")
     }
 
     override func didReceiveMemoryWarning() {
