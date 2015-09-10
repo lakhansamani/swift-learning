@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var name_txt: UITextField!
     @IBOutlet weak var mylab: UILabel!
     @IBAction func buttonClick(sender: AnyObject) {
-        mylab.text="clicked button"
+        var name=name_txt.text
+        var alertController=UIAlertController(title: "Your name", message: "Hello "+name, preferredStyle:.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion:nil)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
